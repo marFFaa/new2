@@ -1,0 +1,354 @@
+* {
+
+    box-sizing: border-box;
+
+}
+
+2) Далее указываем в селекторе шрифт, ширину и вашу фоновую картинку:
+
+html, body {
+
+    font-family: 'Open Sans', sans-serif;
+
+    height: 100%;
+
+    margin: 0;
+
+  background: url("https://github.com/marFFaa/new2/blob/main/mozaika-img-2-2048x1152.jpg");
+
+  background-size: cover;
+
+}
+
+3) В классе объекта указываем ширину и отступы:
+
+.box {
+
+    width: 60%;
+
+    padding-right: 100px;
+
+    padding-left: 70px;
+
+    margin: auto;
+
+}
+
+4) Создаем класс лендинга с расположением, и его производных: хэдера лендинга и ссылок в лендинге и заголовков. Можете изменить цвета на свои:
+
+.landing {
+
+    position: relative;
+
+    background-color: transparent;
+
+}
+
+.landing .header {
+
+    display: inline;
+
+    padding: 10px 0 0;
+
+    position: relative;
+
+}
+
+
+
+.landing .header .links {
+
+    display: inline;
+
+    padding: 0;
+
+    margin: 0;
+
+    width: 100%;
+
+    text-align: right;
+
+}
+
+
+
+.landing .header .links li {
+	border: 0;
+
+    border-radius: 20px;
+
+    display: inline-block;
+
+    margin-left: 5px;
+
+    cursor: pointer;
+	color: black;
+
+    background-color: white;
+
+    font-size: 18px;
+
+}
+
+.landing .header .links li:last-child {
+
+    border: 0;
+
+    border-radius: 20px;
+
+    padding: 10px 18px;
+
+    color: black;
+
+    background-color: #f2e8c9;
+
+    font-size: 18px;
+
+}
+
+.landing .info {
+
+    width: 60%;
+
+   display: flex; flex-direction: column;
+
+    margin-top: 100px;
+
+}
+
+.landing .info h1 {
+
+    font-size: 44px;
+
+    margin: 0 0 20px;
+
+    line-height: 1.4;
+
+    color: white;
+
+}
+
+.landing .info p {
+
+    margin: 0;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+
+    color: black;
+
+}
+
+.landing .info button {
+
+    border: 0;
+
+    border-radius: 20px;
+
+    padding: 12px 30px;
+
+    margin-top: 30px;
+
+    cursor: pointer;
+
+    color: black;
+
+    background-color: #f2e8c9;
+
+}
+
+5) В классах фиксации и контейнера указываем, что ссылки-вкладки будут отображаться блоками:
+
+.clearfix {
+
+  clear: both;
+
+}
+
+
+
+.container {
+
+  display: block;
+
+  color: transparent;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+}
+
+6) Селекторы заголовка и ссылок - указываем отступы и цвет текста (используйте свой, если необходимо):
+
+h2 {
+
+  font-weight: normal;
+
+  letter-spacing: .125rem;
+
+  text-transform: lowercase;
+
+  color: black;
+
+}
+
+
+
+li {
+
+  display: inline-block;
+
+  font-size: 1.5em;
+
+  list-style-type: none;
+
+  padding: 1em;
+
+  text-transform: lowercase;
+
+  color: black;
+
+  font-size: 18px;
+
+}
+
+li span {
+
+  display: block;
+
+  font-size: 4.5rem;
+
+}
+
+7) Это параметры адаптивного отображения. Просто скопируйте:
+
+@media all and (max-width: 768px) {
+
+  h2 {
+
+    font-size: calc(1.5rem * var(--smaller));
+
+  }
+
+  li {
+
+    font-size: calc(1.125rem * var(--smaller));
+
+  }
+
+  li span {
+
+    font-size: calc(3.375rem * var(--smaller));
+
+  }
+
+}
+
+8) Блок скрытого текста под спойлером. Задаем позиции кнопки и ее фоновый цвет:
+
+button:focus {
+
+  outline: none;
+
+}
+
+
+
+#spoiler_button {
+
+ border: 0;
+
+    border-radius: 20px;
+
+    padding: 10px 18px;
+
+    color: black;
+
+    background-color: white;
+
+    font-size: 18px;
+
+}
+
+
+
+#spoiler_button:hover {
+
+border: 0;
+
+    border-radius: 20px;
+
+    padding: 10px 18px;
+
+    color: black;
+
+    background-color: white;
+
+    font-size: 18px;
+
+}
+
+
+
+#spoiler_button:active {
+
+  border: 0;
+
+    border-radius: 20px;
+
+    padding: 10px 18px;
+
+    color: black;
+
+    background-color: #f2e8c9;
+
+    font-size: 18px;
+
+}
+
+
+
+  .fadein, .fadeout {
+
+  height: 0;
+
+  -moz-transition: opacity 1s ease-in-out;
+
+  -o-transition: opacity 1s ease-in-out;
+
+  -webkit-transition: opacity 1s ease-in-out;
+
+
+
+  opacity: 0;  
+
+}
+
+
+
+.fadein {
+
+  height: 100%;
+
+  opacity: 1;
+
+}
+
+
+
+9) Создаем идентификатор селектора для дополнительного текста (под счетчиком акции):
+
+#additional p {
+
+    margin: 0;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+
+    color: black;
+
+
+    }
