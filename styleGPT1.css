@@ -1,0 +1,67 @@
+/* Общие настройки */
+* {
+    box-sizing: border-box;
+}
+
+/* Фоновое изображение */
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    margin: 0;
+    background: url("https://raw.githubusercontent.com/marFFaa/new2/main/mozaika-img-2-2048x1152.jpg")
+    background-size: cover;
+}
+
+/* Основной контейнер */
+.box {
+    width: 60%;
+    padding: 20px;
+    margin: auto;
+}
+
+/* Заголовок */
+.landing .info h1 {
+    font-size: 44px;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Абзацы текста */
+.landing .info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Контейнер для текста */
+.landing .info {
+    width: 60%;
+    float: left;
+    margin-top: 100px;
+}
+
+/* Контейнер для счетчика (если нужен) */
+#additional p {
+    font-size: 15px;
+    color: black;
+}
+
+/* Адаптивность */
+@media all and (max-width: 768px) {
+    .landing .info {
+        width: 90%;
+    }
+    .landing .info h1 {
+        font-size: 36px;
+    }
+    .landing .info p {
+        font-size: 16px;
+    }
+}
