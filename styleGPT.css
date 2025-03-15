@@ -1,0 +1,61 @@
+/* Общие настройки */
+* {
+    box-sizing: border-box;
+}
+
+/* Фоновое изображение */
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    margin: 0;
+    background: url("https://raw.githubusercontent.com/marFFaa/new2/main/mozaika-img-2-2048x1152.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Контейнер для текста */
+.text-container {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Заголовок */
+.text-container h1 {
+    font-size: 44px;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Абзацы текста */
+.text-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Контейнер для счетчика (если нужен) */
+#additional p {
+    font-size: 15px;
+    color: black;
+}
+
+/* Адаптивность */
+@media all and (max-width: 768px) {
+    .text-container {
+        width: 90%;
+    }
+    .text-container h1 {
+        font-size: 36px;
+    }
+    .text-container p {
+        font-size: 16px;
+    }
+}
